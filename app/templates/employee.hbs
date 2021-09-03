@@ -1,0 +1,17 @@
+<h1>Employee</h1>
+<LinkTo class="link" @route="/"><h2>Goto Employees Page</h2></LinkTo>
+<br>
+<h3>Employee: {{@model.user.name}}</h3>
+<h3>Gender: {{@model.user.gender}}</h3>
+<h3>Email: {{@model.user.email}}</h3>
+<h3>Status: {{@model.user.status}}</h3>
+<br>
+{{#if @model.posts}}
+{{#each @model.posts as |one|}}
+<h3>{{one.title}}</h3>
+<p>{{one.body}}</p>
+<br>
+{{/each}}
+{{else}}
+<h1>No Posts</h1>
+{{/if}}

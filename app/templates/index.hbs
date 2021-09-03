@@ -1,0 +1,7 @@
+<h1>Employees</h1>
+<br>
+<LinkTo class="link" @route="posts"><h2>Goto Post Page</h2></LinkTo>
+<br>
+{{#each @model as |one|}}
+<LinkTo class="link" @route='employee' @model={{one.id}}><h3>{{one.name}}</h3></LinkTo>
+{{/each}}
